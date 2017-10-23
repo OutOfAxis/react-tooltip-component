@@ -138,7 +138,11 @@ gulp.task('build:example', (callback) => {
 });
 
 gulp.task('build', (callback) => {
-  runSequence('build:lib', 'build:example', callback);
+  runSequence(
+    'build:lib',
+    // 'build:example',
+    callback
+  );
 });
 
 gulp.task('default', ['build']);

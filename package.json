@@ -4,11 +4,11 @@
   "description": "React tooltip component.",
   "main": "lib/index.js",
   "scripts": {
-    "start": "NODE_ENV=development gulp start",
-    "eslint": "NODE_ENV=development eslint .",
-    "stylelint": "NODE_ENV=development stylelint '**/*.?(s)@(a|c)ss'",
+    "start": "cross-env NODE_ENV=development gulp start",
+    "eslint": "cross-env NODE_ENV=development eslint .",
+    "stylelint": "cross-env NODE_ENV=development stylelint '**/*.?(s)@(a|c)ss'",
     "lint": "npm run eslint && npm run stylelint",
-    "build": "NODE_ENV=production gulp build"
+    "build": "cross-env NODE_ENV=production gulp build"
   },
   "keywords": [
     "react-component",
@@ -20,7 +20,9 @@
     "react": "^0.14 || ^15.0.0",
     "react-dom": "^0.14 || ^15.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cross-env": "^5.1.0"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel": "^5.8.34",
@@ -45,14 +47,14 @@
     "gulp-eslint": "^1.1.0",
     "gulp-filter": "^3.0.1",
     "gulp-postcss": "^6.1.0",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "3.1.0",
     "gulp-stylelint": "^2.0.2",
     "history": "^2.0.1",
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "^2.7.1",
     "http-proxy": "^1.12.0",
     "json-loader": "^0.5.4",
-    "node-sass": "^3.4.2",
+    "node-sass": "4.5.3",
     "opn": "^4.0.0",
     "postcss-loader": "^0.8.0",
     "prop-types": "^15.5.10",
